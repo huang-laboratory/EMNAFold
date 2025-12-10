@@ -57,9 +57,12 @@ check_last $? "Failed at step 3, unable to download pretrained weights"
 cd ..
 
 echo "4 install main program"
+# Excutables
 chmod +x em3na/bin/*
 pip install -e .
 # Please DO include "-e" in the pip command
 check_last $? "Failed at step 4, unable to install main package"
 
 echo "Done install"
+
+
