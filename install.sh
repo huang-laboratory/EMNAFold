@@ -14,13 +14,13 @@ function check_last() {
 
 # 0 check existence
 conda --help >/dev/null
-check_last $? "Please install conda"
+check_last $? "Failed to detect `conda`, maybe `conda` is not installed?"
 
 wget --help >/dev/null
-check_last $? "Please install wget"
+check_last $? "Failed to detect `wget`, maybe `wget ` is not installed?"
 
-tar --hel >/dev/null
-check_last $? "Please install tar"
+tar --help >/dev/null
+check_last $? "Failed to detect `tar`, maybe `tar` is not installed?"
 
 echo "1 Create conda env"
 conda env create -f env.yml
