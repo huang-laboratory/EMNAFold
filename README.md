@@ -13,6 +13,8 @@ We provide a demo case on the Google Colab for a quick trial, check it [here](ht
 
 **GPU**: A GPU with >12 GB memory is required, advanced GPU like A100 is recommended.
 
+**CUDA**: >= 11.8
+
 ## Installation
 #### 0. Install conda
 

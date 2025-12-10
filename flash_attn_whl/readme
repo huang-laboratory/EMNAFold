@@ -10,7 +10,6 @@
 # How to install flash attention package
 # 1. Make sure you have create the conda env and intall all the packages listed in env.yml
 # 2. Check whether PyTorch is compiled with CXX11 ABI
-conda activate em3na
 python -c "import torch; print(torch.compiled_with_cxx11_abi())"
 # 3. If `FALSE/TRUE`, install the `FALSE/TRUE` version using pip
 pip install flash_attn-2.3.2+cu118torch2.1cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
