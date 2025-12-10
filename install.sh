@@ -51,11 +51,11 @@ check_last $? "Failed at step 2.2, unable to install RiNALMo"
 
 echo "3.1 Download pretrained weights"
 cd em3na && wget http://huanglab.phys.hust.edu.cn/EMNAfold/weights/weights.tgz -O weights.tgz && tar -zxf weights.tgz && cd ..
-check_last $? "Failed at step 3, unable to download pretrained weights"
+check_last $? "Failed at step 3.1, unable to download pretrained weights"
 
 echo "3.2 Download RiNALMo trained weights"
 cd em3na/rinalmo && mkdir -p weights && wget https://zenodo.org/records/15043668/files/rinalmo_giga_pretrained.pt -O weights/rinalmo_giga_pretrained.pt && cd ../..
-check_last $? "Failed at step 2.3, unable to download RiNALMo weights"
+check_last $? "Failed at step 3.2, unable to download RiNALMo weights"
 
 echo "4 install main program"
 ### Excutables
