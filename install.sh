@@ -17,10 +17,10 @@ conda --help >/dev/null
 check_last $? "Please install conda"
 
 wget --help >/dev/null
-check_last $? "Please intall wget"
+check_last $? "Please install wget"
 
 tar --hel >/dev/null
-check_last $? "Please intall tar"
+check_last $? "Please install tar"
 
 echo "1 Create conda env"
 conda env create -f env.yml
