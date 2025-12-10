@@ -36,7 +36,8 @@ cd EMNAFold
 
 We write the tedious bash commands into one install.sh, so install EMNAFold is just one command
 ```
-bash install.sh
+# replace /path/to/your/conda to the actual conda directory, e.g. /home/someone/miniconda3
+bash install.sh /path/to/your/conda
 ```
 Alternatively, if you are familiar with Linux, you can run the commands separately in install.sh. 
 
