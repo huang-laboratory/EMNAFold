@@ -21,6 +21,7 @@ wheels/
 
 # Customized
 em3na/rinalmo/weights/rinalmo_giga_pretrained.pt
+em3na/weights.tgz
 em3na/weights/
 flash_attn_whl/*.whl
 
