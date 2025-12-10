@@ -31,8 +31,9 @@ cd EMNAFold
 ```
 
 #### 2. Install EMNAFold
+
+We write the tedious bash commands into one install.sh, so install EMNAFold is just one command
 ```
-# we write the tedious bash commands into one install.sh, so install EMNAFold is just one command
 sh install.sh
 ```
 Alternatively, if you are familiar with Linux, you can run the commands separately in install.sh. 
