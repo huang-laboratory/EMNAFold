@@ -70,10 +70,10 @@ Then run EMNAFold
 emnafold build --map 8T5O.mrc --rna 8T5O.fa --device 0 --ouput out
 ```
 The input map looks like
-<img src='assets/8T5O_map.jpg' width='800'
+<img src='assets/8T5O_map.jpg' width='800'>
 
 The output model (blue) and the PDB model (green) looks like
-<img src='assets/8T5O_model.jpg' width='800'
+<img src='assets/8T5O_model.jpg' width='800'>
 
 #### Post refinement
 Although EMNAFold already shows a high backbone and side-chain match to the density map, it is recommended to use third-party programs to further refine the model-map fit and model geometries, e.g. using **phenix.real_space_refine**
