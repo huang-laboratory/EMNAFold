@@ -77,7 +77,7 @@ def main(args):
     fca = pjoin(out_dir, "raw_c4.pdb")
     if 'cpu' in device:
         lib_dir = abspath(args.lib)
-        print("# Using CPU")
+        print("# getp using CPU")
         ca_success = run_getp(
             fmap, 
             fca, 
@@ -88,7 +88,7 @@ def main(args):
         )
     elif 'cuda' in device:
         gpu_id = int(device.replace("cuda:", ""))
-        print("# Using GPU ID = {}".format(gpu_id))
+        print("# getp using GPU ID = {}".format(gpu_id))
         ca_success = getp(
             fmap, 
             fca, 

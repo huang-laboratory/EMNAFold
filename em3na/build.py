@@ -14,13 +14,11 @@ def add_args(parser):
     parser.add_argument("--rna", "-r", help="Input rna sequence")
     parser.add_argument("--dna", "-d", help="Input dna sequence")
     # Using --dna/--rna instead of a consensus --seq
-    #parser.add_argument("--seq", "-s", help="Input sequence")
     parser.add_argument("--output", "-o", help="Output directory", required=True)
     parser.add_argument("--device", "--gpu", help="GPU device", default="0")
     parser.add_argument("--keep-temp-files", action="store_true")
-    # Resolution (not used by now)
-    #parser.add_argument("--resolution", "-r", help="Map resolution", type=float)
-
+    # Using GPU for faster getp
+    parser.add_argument("--gpu-getp", action="store_true", help="Using GPU to acclerate mean-shift for large maps")
     # Skipping controls
     skip_group = parser.add_argument_group("Skipping options")
     skip_group.add_argument("--skip_preprocess", action='store_true', help=argparse.SUPPRESS)
@@ -118,7 +116,10 @@ def main(args):
             pmap_to_p_args.dmerge = 3.5
 
             # process on gpu will be much faster
-            pmap_to_p_args.device = args.device
+            if args.gpu_getp:
+                pmap_to_p_args.device = args.device
+            else:
+                pmap_to_p_args.device = "cpu"
 
             pmap_to_p.main(pmap_to_p_args)
             end = time.time()
