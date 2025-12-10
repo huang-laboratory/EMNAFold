@@ -44,6 +44,8 @@ Alternatively, if you are familiar with Linux, you can run the commands separate
 ## Usage
 Running EMNAFold is very straight forward with one command like
 ```
+# dont forget to activate the conda env first
+# conda activate emnafold
 emnafold build --map MAP.mrc \
     --dna DNA_SEQ.fa \ # DNA seqs
     --rna RNA_SEQ.fa \ # RNA seqs
