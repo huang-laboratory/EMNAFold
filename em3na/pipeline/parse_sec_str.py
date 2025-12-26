@@ -83,12 +83,13 @@ def backbone_to_sec_str_x(atom_pos, atom_mask, chain_idx, lib_dir='.', temp_dir=
         # Run CSSRX
         fcssr = os.path.join(__temp_dir, f"concated.cssr")
         cmd = [os.path.join(lib_dir, "bin", "CSSRX"), fpdb, fcssr, "-o", "1"]
-        #print(cmd)
+        cmd = " ".join(cmd)
 
         result = subprocess.run(
             cmd,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
+            shell=True, 
             text=True,
         )
 
