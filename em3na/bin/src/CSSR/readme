@@ -1,0 +1,4 @@
+# to compile CSSRX with g++ >- 4.8.5
+make clean
+make all
+
