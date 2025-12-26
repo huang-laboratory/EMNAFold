@@ -1,0 +1,5 @@
+# To completely remove previous versions
+/path/to/conda/env/lib/python3.10/site-packages/easy-install.pth
+
+# Also remove
+/path/to/conda/env/lib/python3.10/site-packages/em3naxxx

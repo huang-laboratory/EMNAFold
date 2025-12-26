@@ -24,7 +24,7 @@ def main():
     parser.add_argument(
         "--version",
         action="version",
-        version=f"em3na {em3na.__version__}",
+        version=f"{em3na.__version__}",
     )
 
     # Suppress some warnings
