@@ -16,8 +16,8 @@ def add_args(parser):
     parser.add_argument("--dna", "-d", help="Input dna sequence")
     # Using --dna/--rna instead of a consensus --seq
     parser.add_argument("--output", "-o", help="Output directory", required=True)
-    parser.add_argument("--device", "--gpu", help="GPU device", default="0")
-    parser.add_argument("--keep-temp-files", action="store_true")
+    parser.add_argument("--device", "--gpu", help="GPU device, default = '0'", default="0")
+    parser.add_argument("--keep-temp-files", action="store_true", help="Whether to keep temp files")
     # Using GPU for faster getp
     parser.add_argument("--gpu-getp", action="store_true", help="Using GPU to acclerate mean-shift for large maps")
     # Skipping controls
