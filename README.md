@@ -5,9 +5,6 @@ EMNAFold is a software for automatic nucleic acid modeling from cryo-EM density 
 
 <img src='assets/workflow.jpg' width='800'>
 
-## Quick trial on Google Colab
-We provide a demo case on the Google Colab for a quick trial, check it [here](https://colab.research.google.com).
-
 ## Requirements
 **Platform**: Linux (Mainly tested on CentOS 7).
 
