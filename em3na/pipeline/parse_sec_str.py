@@ -89,7 +89,16 @@ def backbone_to_sec_str_x(atom_pos, atom_mask, chain_idx, lib_dir='.', temp_dir=
             cmd,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
+            text=True,
         )
+
+        # if failed
+        if result.returncode != 0:
+            print("# Error detect pairings using CSSRX")
+            print("# Original stderr:", flush=True)
+            print(result.stderr, flush=True)
+            exit(1)
+
         #print(result)
 
         with open(fcssr, 'r') as f:
