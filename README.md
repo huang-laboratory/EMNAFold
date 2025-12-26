@@ -109,7 +109,7 @@ This will typically take several minutes.
 
 - **AssertionError: Egg-link /xxx/xxx.egg-link (to /xxx) does not match installed location of xxx (at /xxx)**: This means you fail to install the program. Solution: remove the conda env, install the program again.
 
-- **Error at getp/CSSRX, segmentation faule**:
+- **Error at getp/CSSRX, segmentation fault**:
 Your operating system is not compatible with our pre-compiled executables, please re-compile the programs and use the new ones (this requires g++ >= 4.8.5). Using `bash compile.sh`, we will auto-detect the g++ version, compile programs and copy to `bin/`. 
 
 
