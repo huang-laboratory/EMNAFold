@@ -94,7 +94,7 @@ def backbone_to_sec_str_x(atom_pos, atom_mask, chain_idx, lib_dir='.', temp_dir=
 
         # if failed
         if result.returncode != 0:
-            print("# Error detect pairings using CSSRX")
+            print("# Error at CSSRX")
             print("# Original stderr:", flush=True)
             print(result.stderr, flush=True)
             exit(1)

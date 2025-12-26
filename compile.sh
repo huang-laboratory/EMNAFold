@@ -1,6 +1,5 @@
 #!/bin/bash
 # Compile getp and CSSRX on your local machine, required g++ >= 4.8.5
-
 ver=$(g++ -dumpfullversion 2>/dev/null || g++ -dumpversion)
 
 IFS=. read -r major minor patch <<< "$ver"
