@@ -135,7 +135,7 @@ def infer(args):
             struct = init_struct_from_translation(args.struct, atom="CA")
 
         # check number of atoms
-        if not len(struct.atom_positions) >= 2:
+        if not len(struct.rigidgroups_gt_frames) >= 2:
             print("# Error cannot detect any nucleotides from this map", flush=True)
             exit(1)
 
