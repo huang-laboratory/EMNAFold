@@ -114,7 +114,7 @@ Your operating system is not compatible with our pre-compiled executables, pleas
 
 
 ## Citation
-Tao Li, et al. Improved nucleic acid modeling from cryo-EM maps with EMNAFold. *In submission*. 2025
+Tao Li, et al. Highly accurate nucleic acid model building from cryo-EM maps with EMNAFold. *In submission*. 2025
 ```
 @article {EMNAFold2025,
     title = {Highly accurate nucleic acid model building from cryo-EM maps with EMNAFold},
