@@ -117,7 +117,7 @@ Your operating system is not compatible with our pre-compiled executables, pleas
 Tao Li, et al. Improved nucleic acid modeling from cryo-EM maps with EMNAFold. *In submission*. 2025
 ```
 @article {EMNAFold2025,
-    title = {Improved nucleic acid modeling from cryo-EM maps with EMNAFold},
+    title = {Highly accurate nucleic acid model building from cryo-EM maps with EMNAFold},
     author = {Tao Li, Sheng-You Huang},
     journal = {In submission},
     year = {2025},
