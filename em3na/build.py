@@ -1,6 +1,7 @@
 """Main program"""
 import os
 import sys
+import stat
 import time
 import shutil
 import argparse
@@ -15,8 +16,8 @@ def add_args(parser):
     parser.add_argument("--dna", "-d", help="Input dna sequence")
     # Using --dna/--rna instead of a consensus --seq
     parser.add_argument("--output", "-o", help="Output directory", required=True)
-    parser.add_argument("--device", "--gpu", help="GPU device", default="0")
-    parser.add_argument("--keep-temp-files", action="store_true")
+    parser.add_argument("--device", "--gpu", help="GPU device, default = '0'", default="0")
+    parser.add_argument("--keep-temp-files", action="store_true", help="Whether to keep temp files")
     # Using GPU for faster getp
     parser.add_argument("--gpu-getp", action="store_true", help="Using GPU to acclerate mean-shift for large maps")
     # Skipping controls
@@ -32,6 +33,29 @@ def add_args(parser):
     return parser
 
 def main(args):
+    # Access the programs
+    compiled_programs = ["getp", "CSSRX"]
+    for prog in compiled_programs:
+        p = os.path.join(os.path.dirname(os.path.realpath(__file__)), "bin", prog)
+        if not os.path.exists(p):
+            print(f"# Program -> {prog} is not in 'bin/'")
+            sys.exit(1)
+        if not os.access(p, os.X_OK):
+            print(f"# Program -> {prog} do not have access to execute, try to add access to it")
+            try:
+                st = os.stat(p)
+                os.chmod(p, st.st_mode | stat.S_IXUSR)
+            except Exception as e:
+                print(
+                    f"# Cannot add executing access to program -> {p}\n"
+                )
+                sys.exit(1)
+            # check again
+            if not os.access(p, os.X_OK):
+                print(f"# Still not executable -> {p}, exit now")
+                sys.exit(1)
+
+
     print("# Start modeling")
 
     script_dir = os.path.dirname(__file__)

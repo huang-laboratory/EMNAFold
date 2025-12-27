@@ -1,0 +1,14 @@
+# To compile getp and CSSRX on your local machine (g++ >= 4.8.5)
+
+# getp
+cd src/getp
+make clean
+make all
+cp getp ../../
+
+# CSSRX
+cd src/CSSR
+make clean
+make all
+cp exe/CSSRX ../../
+

@@ -1,9 +1,19 @@
 """
-Automated DNA/RNA backbone modeling from cryo-EM maps
+Automated DNA/RNA modeling from cryo-EM maps
 Tao Li et al.
 """
 
 def main():
+    import sys
+    import time
+    import platform
+    # Check platform
+    if platform.system() != "Linux":
+        print("# WARN Your system is -> {}".format(platform.system()))
+        print("# WARN This program only support Linux systems (tested on CentOS 7)")
+        print("# WARN This program will still run, but at any time it will crash")
+        time.sleep(1)
+
     import argparse
     import warnings
     import em3na
@@ -14,7 +24,7 @@ def main():
     parser.add_argument(
         "--version",
         action="version",
-        version=f"em3na {em3na.__version__}",
+        version=f"{em3na.__version__}",
     )
 
     # Suppress some warnings

@@ -20,6 +20,7 @@ wheels/
 *.egg-info/
 
 # Customized
+em3na/rinalmo/weights
 em3na/rinalmo/weights/rinalmo_giga_pretrained.pt
 em3na/weights.tgz
 em3na/weights/

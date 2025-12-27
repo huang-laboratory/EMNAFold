@@ -134,6 +134,11 @@ def infer(args):
             print("# Use random affine")
             struct = init_struct_from_translation(args.struct, atom="CA")
 
+        # check number of atoms
+        if not len(struct.rigidgroups_gt_frames) >= 2:
+            print("# Error cannot detect any nucleotides from this map", flush=True)
+            exit(1)
+
     if struct is None:
         raise RuntimeError(f"File {args.struct} is not a supported file format.")
 

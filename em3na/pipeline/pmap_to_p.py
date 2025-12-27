@@ -23,9 +23,18 @@ def run_getp(map_dir, out_dir, lib_dir, pdb=None, res=6.0, thresh=20, nt=4, filt
 
     if verbose:
         print(f"# Running command {cmd}")
-    result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
-    success = result.returncode == 0
-    return success
+
+    result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+    if result.returncode != 0:
+        print("# Error at getp")
+        #print("# Original stdout:", flush=True)
+        #print(result.stdout)
+        print("# Original stderr:", flush=True)
+        print(result.stderr)
+        exit(1)
+
+    return True
 
 
 

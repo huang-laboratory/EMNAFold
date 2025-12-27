@@ -5,9 +5,6 @@ EMNAFold is a software for automatic nucleic acid modeling from cryo-EM density 
 
 <img src='assets/workflow.jpg' width='800'>
 
-## Quick trial on Google Colab
-We provide a demo case on the Google Colab for a quick trial, check it [here](https://colab.research.google.com).
-
 ## Requirements
 **Platform**: Linux (Mainly tested on CentOS 7).
 
@@ -44,6 +41,8 @@ Alternatively, if you are familiar with Linux, you can run the commands separate
 ## Usage
 Running EMNAFold is very straight forward with one command like
 ```
+# dont forget to activate the conda env first
+# conda activate emnafold
 emnafold build --map MAP.mrc \
     --dna DNA_SEQ.fa \ # DNA seqs
     --rna RNA_SEQ.fa \ # RNA seqs
@@ -110,12 +109,15 @@ This will typically take several minutes.
 
 - **AssertionError: Egg-link /xxx/xxx.egg-link (to /xxx) does not match installed location of xxx (at /xxx)**: This means you fail to install the program. Solution: remove the conda env, install the program again.
 
+- **Error at getp/CSSRX, segmentation fault**:
+Your operating system is not compatible with our pre-compiled executables, please re-compile the programs and use the new ones (this requires g++ >= 4.8.5). Using `bash compile.sh`, we will auto-detect the g++ version, compile programs and copy to `bin/`. 
+
 
 ## Citation
-Tao Li, et al. Improved nucleic acid modeling from cryo-EM maps with EMNAFold. *In submission*. 2025
+Tao Li, et al. Highly accurate nucleic acid model building from cryo-EM maps with EMNAFold. *In submission*. 2025
 ```
 @article {EMNAFold2025,
-    title = {Improved nucleic acid modeling from cryo-EM maps with EMNAFold},
+    title = {Highly accurate nucleic acid model building from cryo-EM maps with EMNAFold},
     author = {Tao Li, Sheng-You Huang},
     journal = {In submission},
     year = {2025},
