@@ -70,7 +70,7 @@ cd 8T5O
 ```
 Then run EMNAFold
 ```
-emnafold build --map 8T5O.mrc --rna 8T5O.fa --device 0 --ouput out
+emnafold build --map 8T5O.mrc --rna 8T5O.fa --device 0 --output out
 ```
 
 <!--
