@@ -3,7 +3,9 @@
 ## Overview
 EMNAFold is a software for automatic nucleic acid modeling from cryo-EM density maps. 
 
+<!--
 <img src='assets/workflow.jpg' width='800'>
+!-->
 
 ## Requirements
 **Platform**: Linux (Mainly tested on CentOS 7).
